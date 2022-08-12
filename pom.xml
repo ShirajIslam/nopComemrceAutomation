@@ -18,7 +18,7 @@
     <junit.version>4.13.2</junit.version>
     <cucumber.version>7.5.0</cucumber.version>
     <maven.compiler.version>3.8.1</maven.compiler.version>
-    <maven.surefire.version>2.22.2</maven.surefire.version>
+    <maven.surefire.version>3.0.0-M7</maven.surefire.version>
   </properties>
 
   <dependencies>
@@ -120,8 +120,8 @@
 					  <include>**/ParallelRun.java</include>
 				  </includes>
 				  <parallel>methods</parallel>
-				  <threadCount>4</threadCount>
-				  <useUnlimitedThreads>false</useUnlimitedThreads>
+<!--				  <threadCount>4</threadCount>-->
+				  <useUnlimitedThreads>true</useUnlimitedThreads>
 			  </configuration>
 		  </plugin>
 
@@ -131,8 +131,8 @@
               <exclude>**/*IT*.java</exclude> </excludes> <includes> UNCOMMENT BELOW LINE
               - To execute feature files with a single runner <include>**/MyTestRunner.java</include>
               UNCOMMENT BELOW LINE - To execute feature files with multiple runners <include>**/*Runner.java</include>
-              </includes> UNCOMMENT BELOW 3 LINES - To execute using parallel or combination
-              option <parallel>methods</parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount>
+              </includes> UNCOMMENT BELOW 3 LINES - To execute using Parallel or combination
+              option <Parallel>methods</Parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount>
               UNCOMMENT BELOW 3 LINES - To execute using forking or combination option
               <forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory>
               </configuration> </execution> </executions> </plugin> -->

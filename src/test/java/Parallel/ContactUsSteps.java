@@ -1,4 +1,4 @@
-package parallel;
+package Parallel;
 import com.pages.ContactUsPage;
 import com.qa.factory.DriverFactory;
 import com.qa.util.ExcelReader;
@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.formula.functions.Index;
 import org.junit.Assert;
 
 import java.io.IOException;

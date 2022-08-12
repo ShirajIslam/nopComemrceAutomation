@@ -1,4 +1,4 @@
-package parallel;
+package Parallel;
 
 import org.junit.Assert;
 

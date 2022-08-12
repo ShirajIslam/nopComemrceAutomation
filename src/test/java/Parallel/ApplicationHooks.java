@@ -1,4 +1,4 @@
-package parallel;
+package Parallel;
 
 import java.util.Properties;
 
