@@ -1,4 +1,4 @@
-package stepDefinitions;
+package parallel;
 import com.pages.ContactUsPage;
 import com.qa.factory.DriverFactory;
 import com.qa.util.ExcelReader;
