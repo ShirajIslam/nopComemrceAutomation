@@ -45,26 +45,26 @@ public void checkboxOfterms(){
 public void clickOnCheckout() {
 	driver.findElement(checkOutButton).click();
 }
-public void clickOnContinueBilling() throws InterruptedException {
+public void clickOnContinueBilling()  {
 	driver.findElement(continueButtonBilling).click();
-	Thread.sleep(2000);
+
 }
-public void clickOnContinueShippingMethod() throws InterruptedException {
+public void clickOnContinueShippingMethod() {
 	driver.findElement(continueButtonShippingMethod).click();
-	Thread.sleep(2000);
+
 }
-public void clickOnContinuePaymentMethod() throws InterruptedException {
+public void clickOnContinuePaymentMethod(){
 	
 	driver.findElement(continueButtonPaymentMethod).click();
-	Thread.sleep(2000);
+
 }
-public void clickOnContinueButtonPaymentInfo() throws InterruptedException {
+public void clickOnContinueButtonPaymentInfo()  {
 	driver.findElement(continueButtonPaymentInfo).click();
-	Thread.sleep(2000);
+
 }
-public void clickOnConfirmOrder() throws InterruptedException {
+public void clickOnConfirmOrder(){
 	driver.findElement(ButtonConfirmOrder).click();
-	Thread.sleep(2000);
+
 }
 
 public String orderConfirmMessage(){
