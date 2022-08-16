@@ -17,7 +17,7 @@ private By continueButtonShippingMethod=By.xpath("/html/body/div[6]/div[4]/div/d
 private By continueButtonPaymentMethod=By.xpath("//*[@id=\"payment-method-buttons-container\"]/button");
 private By continueButtonPaymentInfo=By.xpath("//*[@id=\"payment-info-buttons-container\"]/button");
 private By ButtonConfirmOrder=By.xpath("//*[@id=\"confirm-order-buttons-container\"]/button");
-private By ComfirmMsg = By.xpath("//*[text()='Your order has been successfully processed!']");
+private final By ConfirmMsg = By.xpath("//*[text()='Your order has been successfully processed!']");
 public OrderPlacePage(WebDriver driver) {
 	this.driver=driver;
 }
@@ -68,7 +68,7 @@ public void clickOnConfirmOrder(){
 }
 
 public String orderConfirmMessage(){
-	return driver.findElement(ComfirmMsg).getText();
+	return driver.findElement(ConfirmMsg).getText();
 }
 
 }

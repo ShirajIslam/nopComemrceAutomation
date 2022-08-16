@@ -33,6 +33,7 @@ public class OrderPlaceSteps {
 	public void products_and_present_in_cart() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
+		//Thread.sleep(1000);
 		Assert.assertTrue(orderplacePage.isProduct1LinkExist());
 		Thread.sleep(1000);
 		Assert.assertTrue(orderplacePage.isProduct2LinkExist());
