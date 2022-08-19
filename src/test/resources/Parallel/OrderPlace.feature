@@ -16,6 +16,20 @@ And go to cart
 Then user gets the title of the page
 And page title should be "Your store. Shopping Cart"
 
+  Scenario: Applying discount code works
+    Then user clicks on add product to cart from two products
+    And go to cart
+    And products are present in cart
+    And Add coupon code
+    And Coupon added message is displayed as "Entered coupon code - 123"
+
+    Scenario: Applying Gift card code works
+      Then user clicks on add product to cart from two products
+      And go to cart
+      And products are present in cart
+      And add gift card code
+      And gift card coupon added message is displayed as "The gift card code was applied"
+
 Scenario: Checkout page title
 Then user clicks on add product to cart from two products
 And go to cart
@@ -35,3 +49,4 @@ And user clicks on continue button of payment method
 And user clicks on continue button of payment information
 And user clicks on confirm button of confirm order
   And  Order confirmed message should be "Your order has been successfully processed!"
+ # Scenario: New address mandatory fields adding

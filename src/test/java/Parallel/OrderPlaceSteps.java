@@ -3,6 +3,7 @@ package Parallel;
 
 
 import io.cucumber.java.en.And;
+import org.apache.commons.collections4.functors.IfClosure;
 import org.junit.Assert;
 
 import com.pages.OrderPlacePage;
@@ -11,8 +12,9 @@ import io.cucumber.java.en.Then;
 
 
 public class OrderPlaceSteps {
-	
+
 	private OrderPlacePage orderplacePage=new OrderPlacePage(DriverFactory.getDriver());
+	//String	totalPayment=orderplacePage.totalValueOfPayment();
 	@Then("user clicks on add product to cart from two products")
 	public void user_clicks_on_add_product_to_cart_from_two_product() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
@@ -35,7 +37,7 @@ public class OrderPlaceSteps {
 	   // throw new io.cucumber.java.PendingException();
 		//Thread.sleep(1000);
 		Assert.assertTrue(orderplacePage.isProduct1LinkExist());
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		Assert.assertTrue(orderplacePage.isProduct2LinkExist());
 	}
 
@@ -78,17 +80,24 @@ public class OrderPlaceSteps {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 
-		orderplacePage.clickOnContinuePaymentMethod();
-		Thread.sleep(500);
+//		Boolean c=totalPayment.contains("$0.00");
+//		if(!c){
+			orderplacePage.clickOnContinuePaymentMethod();
+			Thread.sleep(1000);
+//		}
+
 	}
 
 	@Then("user clicks on continue button of payment information")
 	public void user_clicks_on_continue_button_of_payment_information() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-
-		orderplacePage.clickOnContinueButtonPaymentInfo();
-		Thread.sleep(500);
+		//String	totalPayment=orderplacePage.totalValueOfPayment();
+//		Boolean c=totalPayment.contains("$0.00");
+//		if(!c){
+			orderplacePage.clickOnContinueButtonPaymentInfo();
+			Thread.sleep(500);
+//		}
 	}
 
 	@Then("user clicks on confirm button of confirm order")
@@ -106,5 +115,36 @@ public class OrderPlaceSteps {
 	public void orderConfirmedMessageShouldBe(String msg) {
 		String actualMessage = orderplacePage.orderConfirmMessage();
 		Assert.assertTrue(actualMessage.contains(msg));
+	}
+
+	@Then("Add coupon code")
+	public void add_coupon_code() throws InterruptedException {
+		// Write code here that turns the phrase above into concrete actions
+		//throw new io.cucumber.java.PendingException();
+		orderplacePage.EnterCouponCode();
+		//Thread.sleep(3000);
+	}
+	@Then("Coupon added message is displayed as {string}")
+	public void coupon_added_message_is_displayed_as(String couponMsg) {
+		// Write code here that turns the phrase above into concrete actions
+		//throw new io.cucumber.java.PendingException();
+		String actualCouponMsg=orderplacePage.couponConfirmMsg();
+		Assert.assertTrue(actualCouponMsg.contains(couponMsg));
+
+	}
+	@Then("add gift card code")
+	public void add_gift_card_code() {
+		// Write code here that turns the phrase above into concrete actions
+		//throw new io.cucumber.java.PendingException();
+		orderplacePage.EnterGiftCard();
+	}
+	@Then("gift card coupon added message is displayed as {string}")
+	public void gift_card_coupon_added_message_is_displayed_as(String giftMsg) throws InterruptedException {
+		// Write code here that turns the phrase above into concrete actions
+		//throw new io.cucumber.java.PendingException();
+		String actualGiftCardMsg= orderplacePage.GiftCardMessage();
+		Thread.sleep(3000);
+		Assert.assertTrue(actualGiftCardMsg.contains(giftMsg));
+		Thread.sleep(3000);
 	}
 }
