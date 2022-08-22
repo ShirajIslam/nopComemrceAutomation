@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 19, 2022 07:24:06 PM</span></a>
+<a href="#"><span class="badge badge-primary">Aug 22, 2022 07:24:14 PM</span></a>
 </li>
 </ul>
 </div>
@@ -52,6 +52,11 @@
 <span class="ico"><i class="fa fa-list"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -61,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 19, 2022 07:24:06 PM</h3>
+<h3>Aug 22, 2022 07:24:14 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 19, 2022 07:24:27 PM</h3>
+<h3>Aug 22, 2022 07:24:32 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>4</h3>
+<h3>3</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -95,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>4</b> features passed
+<div><small data-tooltip='75%'>
+<b>3</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='25%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -118,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>13</b> scenarios passed</small></div>
+<div><small data-tooltip='92%'><b>12</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='7%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -138,9 +143,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>98</b> steps passed</small></div>
+<div><small data-tooltip='98%'><b>98</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
+<small data-tooltip='1%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -157,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Login page feature":11.1,"Contact Us Feature":11.199,"Order place feature":20.304,"Return request feature":9.53
+"Contact Us Feature":11.208,"Login page feature":10.262,"Order place feature":17.781,"Return request feature":10.788
 };
 </script>
 <div class="row">
@@ -192,19 +197,19 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 4,
-failParent: 0,
+passParent: 3,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 13,
-failChild: 0,
+passChild: 12,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
 passGrandChild: 98,
-failGrandChild: 0,
+failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
@@ -221,6 +226,7 @@ eventsCount: 5,
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -233,9 +239,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Login page feature</p>
+            <p class="name">Contact Us Feature</p>
             <p class="text-sm">
-              <span>7:24:06 PM</span> / <span>00:00:11:100</span>
+              <span>7:24:14 PM</span> / <span>00:00:11:208</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -243,10 +249,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Login page feature</h5>
-<span class='badge badge-success'>08.19.2022 7:24:06 PM</span>
-<span class='badge badge-danger'>08.19.2022 7:24:17 PM</span>
-<span class='badge badge-default'>00:00:11:100</span>
+<h5 class="test-status text-pass">Contact Us Feature</h5>
+<span class='badge badge-success'>08.22.2022 7:24:14 PM</span>
+<span class='badge badge-danger'>08.22.2022 7:24:25 PM</span>
+<span class='badge badge-default'>00:00:11:208</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -258,7 +264,130 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to contact us page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user fills the form from given sheetname "contactus" and rownumber 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on send button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it shows a successful message "Your enquiry has been successfully sent to the store owner."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to contact us page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user fills the form from given sheetname "contactus" and rownumber 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on send button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it shows a successful message "Your enquiry has been successfully sent to the store owner."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login page feature</p>
+            <p class="text-sm">
+              <span>7:24:14 PM</span> / <span>00:00:10:262</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login page feature</h5>
+<span class='badge badge-success'>08.22.2022 7:24:14 PM</span>
+<span class='badge badge-danger'>08.22.2022 7:24:25 PM</span>
+<span class='badge badge-default'>00:00:10:262</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Login page title</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_gets_the_title_of_the_page()">
+                <span>When user gets the title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.page_title_should_be(java.lang.String)">
+                <span>Then page title should be "Your store. Login"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
       </div>
     </div>
         <div class="collapse">
@@ -299,7 +428,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Forgot Password link</div>
+        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Forgot Password link</div>
       </div>
     </div>
         <div class="collapse">
@@ -317,152 +446,29 @@ eventsCount: 5,
           </div>
         </div>
   </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Login page title</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_is_on_login_page()">
-                <span>Given user is on login page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_gets_the_title_of_the_page()">
-                <span>When user gets the title of the page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.page_title_should_be(java.lang.String)">
-                <span>Then page title should be "Your store. Login"</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Contact Us Feature</p>
-            <p class="text-sm">
-              <span>7:24:06 PM</span> / <span>00:00:11:199</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Contact Us Feature</h5>
-<span class='badge badge-success'>08.19.2022 7:24:06 PM</span>
-<span class='badge badge-danger'>08.19.2022 7:24:17 PM</span>
-<span class='badge badge-default'>00:00:11:199</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user navigates to contact us page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user fills the form from given sheetname "contactus" and rownumber 0</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user clicks on send button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then it shows a successful message "Your enquiry has been successfully sent to the store owner."</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user navigates to contact us page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user fills the form from given sheetname "contactus" and rownumber 1</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user clicks on send button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then it shows a successful message "Your enquiry has been successfully sent to the store owner."</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="6"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Order place feature</p>
             <p class="text-sm">
-              <span>7:24:06 PM</span> / <span>00:00:20:304</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:24:14 PM</span> / <span>00:00:17:781</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Order place feature</h5>
-<span class='badge badge-success'>08.19.2022 7:24:06 PM</span>
-<span class='badge badge-danger'>08.19.2022 7:24:27 PM</span>
-<span class='badge badge-default'>00:00:20:304</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<h5 class="test-status text-fail">Order place feature</h5>
+<span class='badge badge-success'>08.22.2022 7:24:14 PM</span>
+<span class='badge badge-danger'>08.22.2022 7:24:32 PM</span>
+<span class='badge badge-default'>00:00:17:781</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -473,7 +479,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Applying discount code works</div>
+        <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Add multiple product to cart</div>
       </div>
     </div>
         <div class="collapse">
@@ -513,23 +519,13 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.add_coupon_code()">
-                <span>And Add coupon code</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.coupon_added_message_is_displayed_as(java.lang.String)">
-                <span>And Coupon added message is displayed as "Entered coupon code - 123"</span>
-      <div>
-      </div>
-              </div>
           </div>
         </div>
   </div>
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Shopping cart title</div>
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Shopping cart title</div>
       </div>
     </div>
         <div class="collapse">
@@ -636,10 +632,69 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Applying Gift card code works</div>
+        <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Applying discount code works</div>
       </div>
     </div>
         <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_enters_username(java.lang.String)">
+                <span>When user enters username "test@mail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_enters_password(java.lang.String)">
+                <span>And user enters password "1"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.user_clicks_on_add_product_to_cart_from_two_product()">
+                <span>Then user clicks on add product to cart from two products</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.go_to_cart()">
+                <span>And go to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.products_and_present_in_cart()">
+                <span>And products are present in cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.add_coupon_code()">
+                <span>And Add coupon code</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.coupon_added_message_is_displayed_as(java.lang.String)">
+                <span>And Coupon added message is displayed as "Entered coupon code - 123"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>Applying Gift card code works</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="Parallel.LoginPageSteps.user_is_on_login_page()">
                 <span>Given user is on login page</span>
@@ -681,54 +736,27 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.gift_card_coupon_added_message_is_displayed_as(java.lang.String)">
+              <div class="step fail-bg" title="Parallel.OrderPlaceSteps.gift_card_coupon_added_message_is_displayed_as(java.lang.String)">
                 <span>And gift card coupon added message is displayed as "The gift card code was applied"</span>
       <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at Parallel.OrderPlaceSteps.gift_card_coupon_added_message_is_displayed_as(OrderPlaceSteps.java:147)
+	at ✽.gift card coupon added message is displayed as "The gift card code was applied"(file:///C:/Users/BS969/eclipse-workspace/CucumberPOMSeries/src/test/resources/parallel/OrderPlace.feature:31)
+</textarea>
+      
       </div>
               </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Add multiple product to cart</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_is_on_login_page()">
-                <span>Given user is on login page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_enters_username(java.lang.String)">
-                <span>When user enters username "test@mail.com"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_enters_password(java.lang.String)">
-                <span>And user enters password "1"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.LoginPageSteps.user_clicks_on_login_button()">
-                <span>And user clicks on login button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.user_clicks_on_add_product_to_cart_from_two_product()">
-                <span>Then user clicks on add product to cart from two products</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.go_to_cart()">
-                <span>And go to cart</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Parallel.OrderPlaceSteps.products_and_present_in_cart()">
-                <span>And products are present in cart</span>
+              <div class="step pass-bg" title="AFTER">
+                <span>Parallel.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Applying_Gift_card_code_works
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
       <div>
       </div>
               </div>
@@ -738,7 +766,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="100"><span class="badge log pass-bg mr-2">Pass</span>Confirm order by placing a order</div>
+        <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>Confirm order by placing a order</div>
       </div>
     </div>
         <div class="collapse">
@@ -819,14 +847,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="103"
+        <li class="test-item"  status="pass" test-id="75"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Return request feature</p>
             <p class="text-sm">
-              <span>7:24:17 PM</span> / <span>00:00:09:530</span>
+              <span>7:24:21 PM</span> / <span>00:00:10:788</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -835,10 +863,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Return request feature</h5>
-<span class='badge badge-success'>08.19.2022 7:24:17 PM</span>
-<span class='badge badge-danger'>08.19.2022 7:24:27 PM</span>
-<span class='badge badge-default'>00:00:09:530</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=103</span>
+<span class='badge badge-success'>08.22.2022 7:24:21 PM</span>
+<span class='badge badge-danger'>08.22.2022 7:24:32 PM</span>
+<span class='badge badge-default'>00:00:10:788</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=75</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -849,7 +877,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="104"><span class="badge log pass-bg mr-2">Pass</span>Submit return request with selecting a quantity</div>
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Submit return request with selecting a quantity</div>
       </div>
     </div>
         <div class="collapse">
@@ -920,7 +948,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="107"><span class="badge log pass-bg mr-2">Pass</span>Submit return request without selecting a quantity</div>
+        <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Submit return request without selecting a quantity</div>
       </div>
     </div>
         <div class="collapse">
@@ -995,7 +1023,59 @@ eventsCount: 5,
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-        </div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:24:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='154'>And gift card coupon added message is displayed as "The gift card code was applied"</a>
+<div class="">
+<span class="badge badge-default">Order place feature.Applying Gift card code works.And gift card coupon added message is displayed as "The gift card code was applied"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
       </div>
     </div>
   </div>

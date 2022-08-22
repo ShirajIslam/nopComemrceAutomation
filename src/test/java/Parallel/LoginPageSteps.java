@@ -1,13 +1,15 @@
 package Parallel;
 
+import com.qa.factory.DriverFactory;
 import org.junit.Assert;
 
 import com.pages.LoginPage;
-import com.qa.factory.DriverFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.sql.Driver;
 
 public class LoginPageSteps {
 	private static String title;
