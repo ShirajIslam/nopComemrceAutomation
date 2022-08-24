@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread/"
         },
-        //tags = "not @Skip",
+        //tags = "@download",
         monochrome = true,
         glue = {"Parallel"},
         features = { "src/test/resources/parallel/" }

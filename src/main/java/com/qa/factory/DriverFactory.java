@@ -2,22 +2,29 @@ package com.qa.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.util.HashMap;
+
 public class DriverFactory {
 
 	public WebDriver driver;
 	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<>();
-	
+	HashMap<String, Object> prefs = new HashMap<String, Object>();
 	
 	public WebDriver init_driver(String browser) {
 		System.out.println("browser value is: "+ browser);
 		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			tlDriver.set(new ChromeDriver());
+			ChromeOptions options = new ChromeOptions();
+			String downloadPath = System.getProperty("user.dir")+"\\download\\";
+			prefs.put("download.default_directory", downloadPath );
+			options.setExperimentalOption("prefs", prefs);
+			tlDriver.set(new ChromeDriver(options));
 			
 		}
 		else if(browser.equals("edge")) {

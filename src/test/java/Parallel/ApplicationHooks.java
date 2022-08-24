@@ -33,6 +33,12 @@ public class ApplicationHooks {
 		 configReader=new ConfigReader();
 		 prop=configReader.init_prop();
 	}
+	@Before(value = "@download", order=1)
+	public void deleteDownloadedFiles() throws IOException {
+		String downloadedFilePath = System.getProperty("user.dir")+"\\download\\";
+		File f = new File(downloadedFilePath);
+		FileUtils.cleanDirectory(f);
+	}
 	@Before(order=1) 
 	public void launchBrowser() {
 		String browserName=prop.getProperty("browser");
